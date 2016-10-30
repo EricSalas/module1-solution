@@ -44,7 +44,15 @@ $scope.color = "red";
 
 	function getItemsCount(){
 		var itemsArray = $scope.items.split(',');
-		return itemsArray.length;
+		var tmp = 0;
+		for (var i = 0; i<itemsArray.length; i++) {
+			if(itemsArray[i].trim().length == 0){
+				tmp +=1;
+			}
+
+			
+		}
+		return itemsArray.length - tmp;
 
 	}
 
